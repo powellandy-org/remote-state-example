@@ -8,7 +8,7 @@ data "terraform_remote_state" "base" {
 }
 
 resource aws_security_group bastion_ssh_access {
-    name_prefix = "bastion_ssh_access_zoox_wp_cluster"
+    name_prefix = "bastion_ssh_access_example"
     vpc_id      = data.terraform_remote_state.base.outputs.vpc.vpc_id
 
     ingress {
